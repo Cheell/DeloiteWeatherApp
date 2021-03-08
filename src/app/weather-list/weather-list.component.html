@@ -1,0 +1,8 @@
+<div class="global">
+  <div class="title">Weather in:</div>
+    <div *ngFor="let w of weatherList | async ; index as i " class="weatherText">
+      <div class="div">{{i+1 + '.'}}</div>
+      <div class="name">{{w.request.city || null}}</div>
+      <div class="temp" [class.blue]="w.main.temp <= 0">{{w.main.visualTemp}} {{w.request.tempUnits}} </div>
+    </div>
+</div>

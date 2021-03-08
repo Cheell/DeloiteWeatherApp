@@ -1,0 +1,6 @@
+<div class="list">
+  <div *ngFor="let l of locationsWeather | async">
+    <app-location [locationWeather]='l'></app-location>
+  </div>
+  <app-location></app-location>
+</div>

@@ -1,0 +1,25 @@
+<div class="main">
+  <form [formGroup]="form" class="boxesGrid">
+    <select [class.error]="form.controls['city'].invalid && form.controls['city'].touched"
+      class="city" placeholder="Input City Name" formControlName="city">
+      <option value="null" disabled="true" [selected]="allowAdd">Select Country</option>
+      <option *ngFor="let c of cities">{{c}}</option>
+    </select>
+    <input [class.error]="form.controls['units'].invalid && form.controls['units'].touched"
+      class="mode" formControlName="units" placeholder="Units: standard, metric, imperial)">
+    <button *ngIf="allowAdd" [disabled]="form.invalid" class="add" (click)="addLocation()">
+      <fa-icon [icon]="plus"></fa-icon>
+    </button>
+    <button *ngIf="!allowAdd" class="remove">
+      <fa-icon [icon]="minus"></fa-icon>
+    </button>
+  </form>
+</div>
+<div class="main" *ngIf="locationWeather.request.city">
+  <div class="name">{{locationWeather.request.city || null}}</div>
+  <div class="temp" [class.blue]="locationWeather.main.temp <= 0">
+    {{locationWeather.main.visualTemp}}
+    {{locationWeather.request.tempUnits}}
+  </div>
+  <img class="icon" [src] = "iconUrl + locationWeather.weather[0].icon + '.png'">
+</div>

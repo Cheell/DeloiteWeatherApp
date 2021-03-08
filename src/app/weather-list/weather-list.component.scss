@@ -1,0 +1,23 @@
+.title {
+  font-size: 2vw;
+}
+
+.weatherText {
+  width: 70vw;
+  position: relative;
+  top: 3vh;
+  left: 10vw;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  * {
+    margin-right: 0.5vw;
+  }
+}
+
+.global {
+  position: absolute;
+  bottom: 20vh;
+  left: 5vw;
+}

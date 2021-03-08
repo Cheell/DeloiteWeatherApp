@@ -1,0 +1,30 @@
+.boxesGrid {
+  display: grid;
+  grid-template: 'city mode add remove' / 3fr 3fr 1fr 1fr;
+  font-size: 2vw;
+  color: rgb(87, 24, 24);
+
+  .city {
+    margin: 1px;
+    font-size: inherit;
+    color: inherit;
+  }
+  .mode {
+    margin: 1px;
+    font-size: inherit;
+    color: inherit;
+  }
+  button {
+    margin: 1px;
+  }
+
+  .error {
+    border: 2px solid red;
+  }
+
+}
+
+.name, .temp {
+  font-size: 2vw;
+  margin-right: 0.5vw;
+}
