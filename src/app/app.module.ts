@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { LocationComponent } from './locations-list/location/location.component';
 import { LocationsListComponent } from './locations-list/locations-list.component';
 import { WeatherListComponent } from './weather-list/weather-list.component';
-import { ModalComponent } from './modal/modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoreModule } from '@ngrx/store';
@@ -18,7 +17,6 @@ import * as locationsWeatherReducer from '../app/store/location-weather.reducer'
     LocationComponent,
     LocationsListComponent,
     WeatherListComponent,
-    ModalComponent,
   ],
   imports: [
     BrowserModule,
